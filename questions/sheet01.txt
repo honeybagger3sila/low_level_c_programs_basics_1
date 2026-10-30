@@ -1,0 +1,13 @@
+Sheet 01: Pointers & Dynamic Memory Management
+
+Task 01: Value Swapping Using Pointers
+- Objective: Write a C program to swap the values of two integer variables using pointer operations.
+- Requirements: Pass addresses of two variables to a function, swap their memory contents, and print values before and after swapping in the main routine.
+
+Task 02: Array Reversal via Pointer Arithmetic
+- Objective: Reverse an array of integers in-place using pointers instead of standard array indexing.
+- Requirements: Read an array size and its elements. Use start and end pointers to reverse the array in memory, then display the modified array.
+
+Task 03: Dynamic Memory Allocation for Dynamic Array
+- Objective: Allocate and manipulate memory dynamically for an integer array using malloc/free.
+- Requirements: Prompt the user for element count, allocate memory using malloc, calculate element sum and average, print results, and free allocated memory.

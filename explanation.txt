@@ -1,0 +1,60 @@
+TECHNICAL EXPLANATION OF LAB PROGRAMS
+
+========================================================================
+SHEET 01: POINTERS & DYNAMIC MEMORY MANAGEMENT
+========================================================================
+
+Task 01: Value Swapping via Pointers (task01.c)
+- Purpose: Pass-by-reference using raw memory addresses.
+- Explanation: The swap_values function accepts pointer parameters (int *a, int *b). Dereferencing (*a) accesses the caller's stack variable directly rather than copying values.
+- Example Walkthrough:
+  Given x = 15 at memory address 0x100 and y = 42 at 0x104.
+  Passing &x and &y lets the function swap stored data directly in memory.
+  Result: x becomes 42, y becomes 15.
+
+Task 02: In-Place Array Reversal (task02.c)
+- Purpose: Reversing array elements using two pointer boundaries.
+- Explanation: Two pointers (start pointing to index 0, end pointing to size-1) move towards each other while swapping pointed values until start >= end.
+- Example Walkthrough:
+  Input array: [10, 20, 30, 40, 50]
+  Step 1: Swap 10 and 50 -> [50, 20, 30, 40, 10]
+  Step 2: Swap 20 and 40 -> [50, 40, 30, 20, 10]
+  Step 3: Pointers meet at index 2 (value 30). Loop terminates.
+
+Task 03: Dynamic Memory Allocation (task03.c)
+- Purpose: Dynamic memory allocation and cleanup on heap memory.
+- Explanation: Uses malloc() to allocate a block of memory dynamically at runtime based on element size, calculates the total sum, and releases heap memory using free() to avoid memory leaks.
+
+========================================================================
+SHEET 02: STRINGS & BUFFER MANIPULATION
+========================================================================
+
+Task 01: Manual String Length Calculation (task01.c)
+- Purpose: Reimplementing string length traversal without string.h.
+- Explanation: In C, strings are null-terminated character arrays ('\0'). Pointer subtraction (ptr - str) directly yields character count in constant memory space.
+- Example Walkthrough:
+  For string "LowLevelProgramming", base address starts at offset 0, and null terminator is found at offset 19. Difference = 19.
+
+Task 02: In-Place String Reversal (task02.c)
+- Purpose: Reversing character buffers in place.
+- Explanation: Locates null-terminator byte, moves one character back to locate the tail, then swaps head and tail pointers iteratively inward.
+
+Task 03: Target Character Counter (task03.c)
+- Purpose: Sequence scanning through string buffers.
+- Explanation: Increments a pointer through contiguous memory locations, matching each byte against target char 'a' and incrementing counter when matched.
+
+========================================================================
+SHEET 03: MULTIDIMENSIONAL ARRAYS & MATRICES
+========================================================================
+
+Task 01: Dynamic Matrix Addition (task01.c)
+- Purpose: Managing 2D arrays using pointers-to-pointers (int **).
+- Explanation: Allocates an array of pointer heads for rows, then allocates column arrays for each row pointer. Cleans memory row-by-row before freeing master pointers.
+
+Task 02: In-Place Square Matrix Transposition (task02.c)
+- Purpose: Transposing matrix dimensions across the main diagonal.
+- Explanation: Iterates through upper triangular indices (j = i + 1) to swap element A[i][j] with A[j][i] without double-swapping back.
+- Example Walkthrough:
+  1 2 3      1 4 7
+  4 5 6  ->  2 5 8
+  7 8 9      3 6 9

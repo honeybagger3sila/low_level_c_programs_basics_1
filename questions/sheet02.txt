@@ -1,0 +1,13 @@
+Sheet 02: Strings & Buffer Manipulation
+
+Task 01: Manual String Length Calculation
+- Objective: Compute the length of a string without using standard library functions like strlen().
+- Requirements: Iterate through a character array using a pointer until reaching the null-terminator byte ('\0'). Return the character count.
+
+Task 02: String Reversal in Memory
+- Objective: Write a C program to reverse a user-provided string in-place.
+- Requirements: Accept a string input, swap characters from outer ends moving inward, and display the reversed string.
+
+Task 03: Substring Search & Frequency Counter
+- Objective: Count occurrences of a target character inside a text string.
+- Requirements: Read a string and target character, traverse string via pointer arithmetic, and display total matches found.

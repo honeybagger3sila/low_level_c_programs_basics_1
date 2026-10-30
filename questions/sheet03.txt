@@ -1,0 +1,9 @@
+Sheet 03: Multidimensional Arrays & Matrices
+
+Task 01: Dynamic Matrix Addition
+- Objective: Perform matrix addition on two dynamically allocated 2D integer arrays.
+- Requirements: Allocate rows and columns dynamically using pointers, prompt user for element values, perform matrix sum, print result, and properly free 2D memory.
+
+Task 02: Matrix Transposition
+- Objective: Compute the transpose of a square matrix.
+- Requirements: Swap matrix elements across the main diagonal (A[i][j] <-> A[j][i]) in memory and print the transposed matrix layout.
